@@ -22,3 +22,19 @@
             error_reporting(E_ALL);
         }
     }
+    function fromInc($name){
+        if(file_exists("./templates/includes/".$name.".inc.php")){
+            include "./templates/includes/".$name.".inc.php";
+        }else{
+            return false;
+        }
+    }
+    function getLayout($name){
+        if(file_exists("./templates/includes/".$name.".inc.php")){
+            include "./templates/layouts/".$name.".layout.php";
+        }else{
+            return false;
+        }
+    }
+
+    
