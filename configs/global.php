@@ -1,5 +1,5 @@
 <?php 
-    $globalConfigs = 
-    [
-        "debugMode"=> true,
-    ];
+$globalConfigs = 
+[
+    "debugMode" => true,
+];
