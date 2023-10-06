@@ -52,11 +52,12 @@
 
     //fonction update
     //ca sert a rien pour l'instant
-    // function update($connection,$id){
-    //     $statement = $connection->prepare("UPDATE FROM `contacts`SET `status`=`offline` WHERE id = ?");
-    //     $statement->bindParam(1,$id);
-    //     $statement ->execute();
-    // }
-    // update()
+    function update($connection,$id,$valeur,$column){
+        $statement = $connection->prepare("UPDATE `contacts` SET `".$column."` = ? WHERE id = ?");
+        $statement->bindParam(1,$valeur);
+        $statement->bindParam(2,$id);
+        $statement ->execute();
+    }
+    // update($connection,9,"try","name");
 
    
