@@ -10,5 +10,3 @@
         'html' => ob_get_clean(),
     ];
     include "./templates/layouts/". $_GET["layout"] .".layout.php";
-
-    delete($connection);
